@@ -6,20 +6,24 @@ import { AppComponent } from './app.component';
 import { LogoComponent } from './logo/logo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { map, filter } from "rxjs/operators";
+import { BilletsComponent } from './billets/billets.component';
+import { DestinationComponent } from './destination/destination.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LogoComponent
-  ],
+    LogoComponent,
+    BilletsComponent,
+    DestinationComponent,
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

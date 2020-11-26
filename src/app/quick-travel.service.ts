@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { range } from "rxjs";
 import { map, filter } from "rxjs/operators";
 import {Flight} from "src/app/models/flight"
+import { Observable } from 'rxjs';
+import { Ticket } from './models/ticket';
 
 
 @Injectable({
@@ -23,4 +25,9 @@ export class quickTravelService {
     return clientHttp;
   }
 
+
+  getticket(): Observable<Ticket> {
+    var clientHttp = this.httpClient.get<Ticket>(`https://travel-api.clicksomeone.com/tickets`);
+    return clientHttp;
+  }
 }
